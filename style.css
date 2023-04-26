@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --c01: hsl(235, 25%, 10%);
+  --c02: hsl(235, 30%, 20%);
+  --c03: hsl(235, 35%, 30%);
+  --c04: hsl(235, 40%, 40%);
+  --c05: hsl(235, 45%, 50%);
+  --c06: hsl(235, 50%, 60%);
+  --c07: hsl(235, 55%, 70%);
+  --c08: hsl(235, 60%, 75%);
+  --c09: hsl(235, 65%, 82%);
+  --c10: hsl(235, 70%, 89%);
+  --c11: hsl(235, 75%, 96%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
