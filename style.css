@@ -16,7 +16,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 18px;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -25,4 +26,118 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+
+body {
+  position: relative;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--c01);
+  display: grid;
+  grid-template-columns: 300px auto;
+  transition: all 300ms ease-out;
+}
+
+body.collapsed {
+  grid-template-columns: 50px auto;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  padding: 1.5rem;
+  background-color: var(--c01);
+  color: var(--c09);
+  display: grid;
+  gap: 3.0rem;
+  grid-template-rows: auto;
+  align-items: start;
+  align-content: start;
+  overflow: auto;
+  transition: all 300ms ease-out;
+}
+
+nav.collapsed {
+  width: 50px;
+  padding-left: 0.2rem;
+  overflow: hidden;
+}
+
+nav > div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.dashboard-logo-container {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: grid;
+  gap: 4px;
+  grid-template: 1fr 0.5fr 1fr / 1fr 1fr;
+}
+
+.dashboard-logo-item {
+  background-color: var(--c06);
+}
+
+.item-1 {
+  grid-row: 1 / 3;
+}
+
+.item-4 {
+  grid-row: 2 / 4;
+}
+
+nav h1 {
+  font-size: 2.0rem;
+  margin-left: 1.0rem;
+}
+
+nav.collapsed h1 {
+  transition: all 300ms ease-out;
+  opacity: 0;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  margin-left: 0.5rem;
+}
+
+nav li + li {
+  margin-top: 1.0rem;
+}
+
+nav a {
+  display: grid;
+  grid-template-columns: min-content auto;
+}
+
+nav svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 1.0rem;
+  color: inherit;
+}  
+
+nav a:any-link {
+  text-decoration-line: none;
+  color: var(--c07);
+}
+
+nav a:hover {
+  color: var(--c10);
+}
+
+header {
+  grid-column: 2 / 3;
+}
+
+main {
+  grid-column: 2 / 3;
 }
