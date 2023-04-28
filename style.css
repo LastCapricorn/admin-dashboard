@@ -303,6 +303,7 @@ main section > div > div > div {
 }
 main section a:any-link {
   text-decoration-line: none;
+  color: var(--c06);
 }
 
 main section svg {
